@@ -5,6 +5,7 @@ import http from 'http';
 import mongoose from 'mongoose';
 import * as config from './config.json';
 import morgan from 'morgan';
+import apiRoutes from './routes/apiRoutes';
 
 const app = express();
 
@@ -26,6 +27,8 @@ app.use(cors());
 app.use(helmet());
 app.use(morgan("dev"));
 app.use(express.json());
+
+app.use("/api", apiRoutes);
 
 app.use((_, res) =>
   res.status(404).send({
