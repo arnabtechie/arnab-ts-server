@@ -17,5 +17,5 @@ Follow these steps to set up and run the project:
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/your-username/typescript-node-starter.git
-   cd typescript-node-starter
+   git clone https://github.com/arnabtechie/arnab-ts-server
+   cd arnab-ts-server
