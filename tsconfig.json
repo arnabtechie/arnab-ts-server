@@ -108,6 +108,7 @@
   },
   "include": [
     "src/**/*.ts", // Include your source files
-    "test/**/*.test.ts" // Include your test files
+    "test/**/*.test.ts", // Include your test files
+    "test/**/*.ts" // Include your test files
   ]
 }
