@@ -4,10 +4,9 @@
   "description": "API Server Build on Node, Express, TypeScript & MongoDB",
   "main": "server.js",
   "scripts": {
-    "build": "npx tsc",
-    "start": "node src/server.js",
+    "start": "tsc && node dist/server.js",
     "dev": "nodemon",
-    "ts-dev": "ts-node src/server.ts"
+    "test": "tsc tests/* && npx mocha tests/setup.js 'tests/**/*.test.js'"
   },
   "repository": {
     "type": "git",
