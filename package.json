@@ -6,7 +6,7 @@
   "scripts": {
     "start": "tsc && node dist/server.js",
     "dev": "nodemon",
-    "test": "tsc tests/* && npx mocha tests/setup.js 'tests/**/*.test.js'"
+    "test": "tsc && npx mocha dist/tests/setup.js 'dist/tests/**/*.test.js'"
   },
   "repository": {
     "type": "git",
