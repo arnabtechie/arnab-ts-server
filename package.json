@@ -4,8 +4,10 @@
   "description": "API Server Build on Node, Express, TypeScript & MongoDB",
   "main": "server.js",
   "scripts": {
-    "start": "tsc && node dist/server.js",
+    "start": "tsc && node dist/index.js",
     "dev": "nodemon",
+    "ts-run": "ts-node ./src/index.ts",
+    "build": "tsc .",
     "test": "tsc && npx mocha dist/tests/setup.js 'dist/tests/**/*.test.js'"
   },
   "repository": {

@@ -9,8 +9,10 @@ process.on('uncaughtException', (err) => {
   process.exit(1);
 });
 
-const server = app.listen(process.env.PORT, () => {
-  console.log(`server running on port ${process.env.PORT}...`);
+const PORT = 3000;
+
+const server = app.listen(PORT, () => {
+  console.log(`server running on port ${PORT}...`);
 });
 
 process.on('SIGTERM', () => {
