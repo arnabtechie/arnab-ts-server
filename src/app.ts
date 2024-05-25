@@ -7,9 +7,7 @@ import apiRoutes from './routes/apiRoutes';
 
 const app = express();
 
-app.get('/', (_, res: Response) =>
-  res.status(200).send({ message: 'success' })
-);
+app.get('/', (_, res: Response) => res.status(200).send({ message: 'success' }));
 
 const server = http.createServer(app);
 
