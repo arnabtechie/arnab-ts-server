@@ -1,14 +1,18 @@
 {
   "name": "arnab-ts-server",
   "version": "1.0.0",
-  "description": "API Server Build on Node, Express, TypeScript & MongoDB",
-  "main": "server.js",
+  "description": "API Server Build on Node, Express, TypeScript & SQL",
+  "main": "index.js",
   "scripts": {
-    "start": "tsc && node dist/index.js",
+    "start": "node dist/index.js",
     "dev": "nodemon",
     "ts-run": "ts-node ./src/index.ts",
-    "build": "tsc .",
-    "test": "tsc && npx mocha dist/tests/setup.js 'dist/tests/**/*.test.js'"
+    "build": "tsc",
+    "test": "tsc && npx mocha dist/tests/setup.js 'dist/tests/**/*.test.js'",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up -d",
+    "docker:restart": "docker-compose restart",
+    "docker:down": "docker-compose down"
   },
   "repository": {
     "type": "git",
