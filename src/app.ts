@@ -18,7 +18,7 @@ app.use(express.json());
 
 app.use('/api', apiRoutes);
 
-app.use((_, res) =>
+app.use((_, res: Response) =>
   res.status(404).send({
     error: '404 route not found',
   })
