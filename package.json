@@ -2,12 +2,12 @@
   "name": "arnab-ts-server",
   "version": "1.0.0",
   "description": "API Server Build on Node, Express, TypeScript & SQL",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
-    "start": "node dist/index.js",
+    "start": "npm run build && node dist/index.js",
     "dev": "nodemon",
     "ts-run": "ts-node ./src/index.ts",
-    "build": "tsc",
+    "build": "rimraf dist/ && npx tsc",
     "test": "tsc && npx mocha dist/tests/setup.js 'dist/tests/**/*.test.js'",
     "docker:build": "docker-compose build",
     "docker:up": "docker-compose up -d",
@@ -25,7 +25,6 @@
   },
   "homepage": "https://github.com/arnabtechie/arnab-ts-server#readme",
   "dependencies": {
-    "@prisma/client": "^5.10.2",
     "bcrypt": "^5.1.0",
     "cors": "^2.8.5",
     "debug": "^4.3.4",
@@ -36,7 +35,6 @@
     "helmet": "^7.0.0",
     "jsonwebtoken": "^9.0.1",
     "morgan": "^1.10.0",
-    "prisma": "^5.10.2",
     "typescript": "^5.1.6",
     "uuid": "^9.0.1"
   },
@@ -51,6 +49,7 @@
     "@types/node": "^20.11.20",
     "mocha": "^10.3.0",
     "nodemon": "^3.1.0",
+    "rimraf": "^6.0.1",
     "ts-node": "^10.9.2"
   }
 }
