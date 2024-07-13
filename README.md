@@ -7,6 +7,7 @@ This is a starter template for a TypeScript project with Node.js. It includes ba
 Before you can start working with this project, make sure you have the following tools installed:
 
 - [Node.js](https://nodejs.org/) (v16 or later)
+- [yarn](https://yarnpkg.com/cli/node/)
 - [npm](https://www.npmjs.com/)
 - [TypeScript](https://www.typescriptlang.org/)
 
