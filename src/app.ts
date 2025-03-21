@@ -2,9 +2,10 @@ import express, { NextFunction, Request, Response } from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import http from 'http';
-import apiRoutes from './routes';
+import apiRoutes from './routes/routes';
 import { testConnection } from './database/connection';
 import logger from './utils/logger';
+import errorHandler from './middleware/errorHandler';
 
 const app = express();
 
@@ -30,6 +31,8 @@ app.use((req: Request, res: Response): void => {
     error: '404 route not found',
   });
 });
+
+app.use(errorHandler);
 
 const server = http.createServer(app);
 
