@@ -4,7 +4,7 @@
   "description": "API Server Build on Node, Express, TypeScript & SQL",
   "main": "index.ts",
   "scripts": {
-    "start": "npm run build && node dist/index.js",
+    "start": "yarn build && node dist/index.js",
     "dev": "nodemon",
     "ts-run": "ts-node ./src/index.ts",
     "build": "rimraf dist/ && npx tsc",
