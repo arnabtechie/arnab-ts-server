@@ -11,7 +11,7 @@ export interface LoginInput {
 }
 
 export interface UserPayload {
-  uuid: string;
-  fullName: string;
+  userid: string;
+  fullname: string;
   email: string;
 }

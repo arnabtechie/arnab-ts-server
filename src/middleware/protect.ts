@@ -8,19 +8,21 @@ interface AuthRequest extends Request {
   user?: UserPayload;
 }
 
-export const protect = (req: AuthRequest, res: Response, next: NextFunction) => {
-  const token = req.header('Authorization')?.split(' ')[1];
+export const protect = (req: AuthRequest, res: Response, next: NextFunction): void => {
+  const token = req.header('Authorization')?.split(' ')[1] as string;
   if (!token) {
-    return res.status(401).json({ error: 'Access denied' });
+    res.status(401).json({ error: 'Access denied' });
+    return;
   }
 
   try {
     const decoded = jwt.verify(token, JWT_SECRET) as UserPayload;
-    req.user = decoded;
+    req.user = decoded as UserPayload;
     next();
   } catch (error) {
     logger.error(`[ERROR] ${JSON.stringify(error)}`);
-    return res.status(401).json({ error: 'Invalid token' });
+    res.status(401).json({ error: 'Invalid token' });
+    return;
   }
 };
 
