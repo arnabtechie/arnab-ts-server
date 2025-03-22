@@ -15,8 +15,3 @@ export interface UserPayload {
   fullName: string;
   email: string;
 }
-
-export interface Response {
-  status: number;
-  data: Record<string, unknown>;
-}
